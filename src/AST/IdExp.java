@@ -4,12 +4,19 @@ package AST;
 
 public
 class IdExp extends SimpleNode {
+  
+  String identificador;  
+    
   public IdExp(int id) {
     super(id);
   }
 
   public IdExp(CalcParser p, int id) {
     super(p, id);
+  }
+  
+  public void setID(String image){
+      identificador = image;
   }
 
 }

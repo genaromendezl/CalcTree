@@ -3,7 +3,10 @@
 package AST;
 
 public
-class FPLitExp extends SimpleNode {
+class FPLitExp extends SimpleNode {    
+
+  float numero;
+  
   public FPLitExp(int id) {
     super(id);
   }
@@ -11,6 +14,11 @@ class FPLitExp extends SimpleNode {
   public FPLitExp(CalcParser p, int id) {
     super(p, id);
   }
+  
+  public void setFPLIT(String image){
+      numero = Float.parseFloat(image);
+  }
+  
 
 }
 /* JavaCC - OriginalChecksum=745e48bad46ec6479856a4099ba035f6 (do not edit this line) */
