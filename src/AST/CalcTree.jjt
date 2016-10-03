@@ -29,7 +29,8 @@ options {
 }
 PARSER_BEGIN(CalcParser)
 package AST;
-public class CalcParser {}
+public class CalcParser {
+}
 PARSER_END(CalcParser)
 
 /* *** Token specification *** */
