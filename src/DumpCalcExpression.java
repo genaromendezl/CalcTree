@@ -19,12 +19,19 @@ import java.io.*;
 class DumpCalcExpression {
 
   public static void main(String args[]) {
+      
+    /*  
     if(args.length != 1) {
       System.err.println("DumpCalcExpression: missing file command line argument");
       System.exit(1);
     }
+    archivo = args[0];
+    */
+    
+    String archivo = "fuente.src";
+          
     try {
-      CalcParser parser = new CalcParser(new FileReader(args[0]));
+      CalcParser parser = new CalcParser(new FileReader(archivo));
 
       // Start parsing from the nonterminal "Start".
       Start ast = parser.Start();
@@ -33,7 +40,7 @@ class DumpCalcExpression {
       ast.dump(" ");  
     }
     catch (FileNotFoundException e) {
-      System.err.println("DumpCalcExpression: file " + args[0] + " not found");
+      System.err.println("DumpCalcExpression: file " + archivo + " not found");
     }
     catch (ParseException e) {
       System.out.println(e.getMessage());
