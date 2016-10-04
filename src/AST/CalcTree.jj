@@ -33,7 +33,8 @@ package AST;
 public class CalcParser/*@bgen(jjtree)*/implements CalcParserTreeConstants/*@egen*/ {/*@bgen(jjtree)*/
   protected static JJTCalcParserState jjtree = new JJTCalcParserState();
 
-/*@egen*/}
+/*@egen*/
+}
 PARSER_END(CalcParser)
 
 /* *** Token specification *** */
