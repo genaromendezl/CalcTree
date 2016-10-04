@@ -37,7 +37,15 @@ class DumpCalcExpression {
       Start ast = parser.Start();
     
       // Print the resulting AST on standard output.
-      ast.dump(" ");  
+  
+      System.out.println(ast.jjtGetNumChildren());
+      
+      Node n = ast.jjtGetChild(0);
+      
+      System.out.println(n);
+      
+      System.out.println(n.jjtGetNumChildren());
+      
     }
     catch (FileNotFoundException e) {
       System.err.println("DumpCalcExpression: file " + archivo + " not found");
