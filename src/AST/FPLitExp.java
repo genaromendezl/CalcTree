@@ -4,7 +4,8 @@ package AST;
 
 public
 class FPLitExp extends SimpleNode {
-  float numero;
+  float  valor;
+  String tipo = "flotante";
   public FPLitExp(int id) {
     super(id);
   }
@@ -14,8 +15,14 @@ class FPLitExp extends SimpleNode {
   }
   
   public void setFPLIT(String image){
-      numero = Float.parseFloat(image);
+      valor = Float.parseFloat(image);
       
+  }
+  
+  @Override
+  public void dump(String prefix){
+      System.out.println("tipo: "+this.tipo+" valor: "+this.valor);
+      super.dump(prefix);
   }
 
 }

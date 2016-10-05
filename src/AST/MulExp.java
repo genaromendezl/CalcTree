@@ -12,5 +12,12 @@ class MulExp extends SimpleNode {
     super(p, id);
   }
 
+  
+  @Override
+  public void dump(String prefix) {
+      System.out.println("Hola!");
+      super.dump(prefix);
+  }
+  
 }
 /* JavaCC - OriginalChecksum=0144fe830020e17c677a1ebb19804373 (do not edit this line) */

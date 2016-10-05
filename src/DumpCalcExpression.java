@@ -46,6 +46,8 @@ class DumpCalcExpression {
       
       System.out.println(n.jjtGetNumChildren());
       
+      ast.dump(" ");
+      
     }
     catch (FileNotFoundException e) {
       System.err.println("DumpCalcExpression: file " + archivo + " not found");
